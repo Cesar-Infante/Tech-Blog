@@ -4,7 +4,11 @@ const User = require('../../models/User');
 // CREATE new user
 router.post('/register', async (req, res) => {
     try {
-        const dbUserData = await User.create(req.body);
+        const dbUserData = await User.create({
+            username: req.body.username,
+            email: req.body.email,
+            password: req.body.password,
+        });
 
         // Set up sessions with a 'loggedIn' variable set to `true`
         req.session.save(() => {

@@ -1,8 +1,8 @@
-const loginFormHandler = async (event) => {
+const login = async (event) => {
     event.preventDefault();
 
-    const email = document.querySelector('#email').value.trim();
-    const password = document.querySelector('#password').value.trim();
+    const email = document.getElementById('#email').value.trim();
+    const password = document.getElementById('#password').value.trim();
 
     if (email && password) {
         const response = await fetch('/api/users/login', {
@@ -12,7 +12,7 @@ const loginFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/');
+            document.location.href = '/';
         } else {
             alert('Failed to log in.');
         }
@@ -22,9 +22,9 @@ const loginFormHandler = async (event) => {
 const signupFormHandler = async (event) => {
     event.preventDefault();
 
-    const username = document.querySelector('#name').value.trim();
-    const email = document.querySelector('#email').value.trim();
-    const password = document.querySelector('#password').value.trim();
+    const username = document.getElementById('#name').value.trim();
+    const email = document.getElementById('#email').value.trim();
+    const password = document.getElementById('#password').value.trim();
 
     if (username && email && password) {
         const response = await fetch('/api/users/register', {
@@ -34,7 +34,8 @@ const signupFormHandler = async (event) => {
         });
 
         if (response.ok) {
-            document.location.replace('/');
+            alert('Welcome!')
+            document.location.href('/');
         } else {
             alert('Failed to sign up.');
         }
