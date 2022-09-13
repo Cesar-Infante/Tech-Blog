@@ -3,10 +3,10 @@
         <div class="panel-heading panel-title text-center">
             <h1 class="title">Sign Up</h1>
         </div>
-        <form class="form-horizontal signup-form">
+        <form action="/api/users/register" method="POST" class="form-horizontal signup-form">
             <label for="name" class="cols-sm-2 control-label">Name</label>
             <div class="cols-sm-10">
-                <input type="text" class="form-control" name="name" id="name" placeholder="Enter your Name" />
+                <input type="text" class="form-control" name="username" id="name" placeholder="Enter your Name" />
             </div>
 
             <label for="email" class="cols-sm-2 control-label">Email</label>
