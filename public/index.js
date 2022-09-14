@@ -1,5 +1,5 @@
-let today = new Date().toLocaleDateString()
+// let today = new Date().toLocaleDateString()
 
-const date = document.querySelector('.date')
+// const date = document.querySelector('.date')
 
-date.textContent = today
+// date.textContent = today

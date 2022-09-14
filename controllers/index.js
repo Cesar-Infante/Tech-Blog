@@ -10,5 +10,6 @@ router.use('/login', loginRoutes)
 router.use('/dashboard', dashboardRoutes)
 router.use('/register', registerRoutes)
 router.use('/api', apiRoutes)
+router.use('*', homeRoutes)
 
 module.exports = router;
