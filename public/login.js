@@ -13,7 +13,7 @@ const loginFormHandler = async (event) => {
             button: "Try Again"
         });
     } else if (!password) {
-        swal({
+        return swal({
             title: "Error!",
             text: "Missing Password!",
             icon: "error",
